@@ -1,0 +1,19 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+"       Tatsuya77 https://gitlab.com/tatsuya_rf46
+"
+" Version:
+"       versions found in https://gitlab.com/tatsuya_rf46/vimrc
+"
+" Sections:
+"    -> Source File Paths
+"    
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Source Files Paths
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.vim/vimrcs/general.vim
+source $HOME/.vim/vimrcs/file_types.vim
+source $HOME/.vim/vimrcs/plugins_config.vim

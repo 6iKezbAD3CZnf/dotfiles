@@ -1,0 +1,42 @@
+[submodule ".zsh/zsh-autosuggestions"]
+	path = .zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".zsh/zsh-syntax-highlighting"]
+	path = .zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".zsh/zsh-history-substring-search"]
+	path = .zsh/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule ".vim/pack/filetype/start/vimtex"]
+	path = .vim/pack/filetype/start/vimtex
+	url = https://github.com/lervag/vimtex.git
+[submodule ".vim/pack/general/start/ale"]
+	path = .vim/pack/general/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule ".vim/pack/general/start/auto-pairs"]
+	path = .vim/pack/general/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule ".vim/pack/general/start/nerdtree"]
+	path = .vim/pack/general/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/general/start/templenty.vim"]
+	path = .vim/pack/general/start/templenty.vim
+	url = https://gitlab.com/tatsuya_rf46/templenty.vim.git
+[submodule ".vim/pack/general/start/vim-surround"]
+	path = .vim/pack/general/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/colorscheme/start/vim-colors-solarized"]
+	path = .vim/pack/colorscheme/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "/home/tatsu/.vim/pack/layout/start/vim-airline"]
+	path = .vim/pack/layout/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/general/start/bufexplorer"]
+	path = .vim/pack/general/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule ".vim/pack/layout/start/vim-airline-themes"]
+	path = .vim/pack/layout/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/pack/general/start/nerdcommenter"]
+	path = .vim/pack/general/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git

@@ -1,0 +1,65 @@
+#!/bin/sh
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
+
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+# set resolution in VirtualBox
+
+if cat /etc/hostname | grep -q "VM" && [ -x /usr/bin/xrandr ]; then
+    xrandr --output Virtual1 --mode 1920x1080
+fi
+
+# set the wallpaper
+
+if [ -x /usr/bin/feh ] && [ -d $HOME/Images/wallpapers ]; then
+    feh --bg-scale --randomize $HOME/Images/wallpapers
+    $HOME/.fehbg &
+fi
+
+# for window transparency
+
+if [ -x /usr/bin/xcompmgr ]; then
+    xcompmgr &
+fi
+
+# start ibus
+
+if [ -x /usr/bin/ibus-daemon ]; then
+    ibus-daemon -drx
+fi
+
+# start xmonad
+
+if [ -x /usr/bin/xmonad ]; then
+    xmonad --recompile
+    exec xmonad
+fi
