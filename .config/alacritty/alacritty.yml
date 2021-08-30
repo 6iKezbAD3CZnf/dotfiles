@@ -28,4 +28,6 @@ colors:
     white:   '0xfdf6e3'
 
 font:
+  normal:
+    family: Noto Sans Mono
   size: 10
