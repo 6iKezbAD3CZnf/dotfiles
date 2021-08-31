@@ -36,6 +36,7 @@ fi
 
 if cat /etc/hostname | grep -q "VM" && [ -x /usr/bin/xrandr ]; then
     xrandr --output Virtual1 --mode 1920x1080
+    xrandr --output Virtual-1 --mode 1920x1080
 fi
 
 # set the wallpaper
