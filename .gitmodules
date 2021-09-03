@@ -40,3 +40,6 @@
 [submodule ".vim/pack/general/start/nerdcommenter"]
 	path = .vim/pack/general/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/filetype/start/rust.vim"]
+	path = .vim/pack/filetype/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git

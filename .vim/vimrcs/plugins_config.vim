@@ -25,10 +25,18 @@ let g:ale_linters = {
 \   'C': ['gcc'],
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'rust': ['analyzer'],
 \}
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
+\   }
+let g:ale_fix_on_save = 1
+
+map <silent> <leader>a <Plug>(ale_next_wrap)
+map <leader>d :ALEGoToDefinition<cr>
 
 " Enabling highlighting
 let g:ale_set_highlights = 1
@@ -39,6 +47,9 @@ let g:ale_lint_on_enter = 0
 
 " Avoid cursor disappearing
 let g:ale_echo_cursor = 1
+
+" Autocomplete
+let g:ale_completion_enabled = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
