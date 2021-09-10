@@ -22,17 +22,17 @@
 " => Ale (syntax checker and linter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'C': ['gcc'],
-\   'javascript': ['jshint'],
-\   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck'],
-\   'rust': ['analyzer'],
-\}
+            \   'C': ['gcc'],
+            \   'javascript': ['jshint'],
+            \   'python': ['flake8'],
+            \   'go': ['go', 'golint', 'errcheck'],
+            \   'rust': ['analyzer'],
+            \}
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'rust': ['rustfmt'],
-\   }
+            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   'rust': ['rustfmt'],
+            \}
 let g:ale_fix_on_save = 1
 
 map <silent> <leader>a <Plug>(ale_next_wrap)
@@ -51,11 +51,22 @@ let g:ale_echo_cursor = 1
 " Autocomplete
 let g:ale_completion_enabled = 1
 
+" Rust
+let g:ale_rust_analyzer_config = {
+            \  "cargo": {
+            \    "loadOutDirsFromCheck": 'true',
+            \  },
+            \  "procMacro": {
+            \    "enable": 'true',
+            \  }
+            \}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERD Commenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
