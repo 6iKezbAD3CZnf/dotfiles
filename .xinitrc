@@ -39,10 +39,11 @@ if cat /etc/hostname | grep -q "VM" && [ -x /usr/bin/xrandr ]; then
     xrandr --output Virtual-1 --mode 1920x1080
 fi
 
-# set the wallpaper
+# set the wallpaper (downloading from Unsplash.com on boot)
 
-if [ -x /usr/bin/feh ] && [ -d $HOME/Images/wallpapers ]; then
-    feh --bg-scale --randomize $HOME/Images/wallpapers
+if [ -x /usr/bin/feh ] && [ -x /usr/bin/wget ] && [ -d $HOME/Images/wallpapers ]; then
+    wget -O $HOME/Images/wallpapers/unsplash_nature_on_boot.jpg "https://source.unsplash.com/1920x1080?nature"
+    feh --bg-scale $HOME/Images/wallpapers/unsplash_nature_on_boot.jpg
     $HOME/.fehbg &
 fi
 
