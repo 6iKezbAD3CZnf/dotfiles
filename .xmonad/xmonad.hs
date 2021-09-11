@@ -12,6 +12,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Actions.GridSelect
 import XMonad.Actions.SpawnOn
 import XMonad.Layout.Gaps
+import XMonad.Layout.NoBorders
 import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Simplest
@@ -110,6 +111,7 @@ addTopBar = noFrillsDeco shrinkText myTabTheme
 
 myLayout =
     avoidStruts
+    $ smartBorders
     $ windowNavigation
     $ addTopBar
     $ addTabs shrinkText myTabTheme
@@ -149,7 +151,7 @@ spawnSelected' lst = gridselect conf lst >>= flip whenJust spawn
             , gs_font         = myFont
             }
 
-myAppGrid = 
+myAppGrid =
     [ ("Alacritty", "alacritty")
     , ("Firefox", "firefox")
     , ("PCManFM", "pcmanfm")
