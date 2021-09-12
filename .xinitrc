@@ -61,7 +61,13 @@ fi
 
 # start xmonad
 
-if [ -x /usr/bin/xmonad ]; then
-    xmonad --recompile
-    exec xmonad
+if cat /etc/hostname | grep -q "VM"; then
+    if [ -x /usr/bin/xmonad ]; then
+        xmonad --recompile
+        xmonad
+    fi
+else
+    if [ -x /usr/bin/VBoxManage ]; then
+        virtualbox
+    fi
 fi
