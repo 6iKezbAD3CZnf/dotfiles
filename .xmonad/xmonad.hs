@@ -3,6 +3,7 @@
  -}
 
 import System.IO
+import System.Exit
 
 import XMonad
 import XMonad.ManageHook
@@ -57,7 +58,7 @@ myConfig p = def
     , focusedBorderColor = myActiveColor
     , layoutHook = myLayout
     , logHook = myLogHook p
-    , manageHook = myManageHook <+> namedScratchpadManageHook scratchpads <+> manageHook def
+    , manageHook = namedScratchpadManageHook scratchpads <+> myManageHook <+> manageHook def
     , normalBorderColor = myInactiveColor
     , borderWidth = 3
     }
@@ -89,7 +90,8 @@ myKeys =
     , ("M-S-l", sendMessage $ pullGroup R)
     , ("M-S-k", sendMessage $ pullGroup U)
     , ("M-S-j", sendMessage $ pullGroup D)
-    , ("M-r", spawn "xmonad --recompile && xmonad --restart")
+    , ("M-S-q", io (exitWith ExitSuccess))
+    , ("M-r", spawn "xmonad --recompile; xmonad --restart")
     , ("M-z", namedScratchpadAction scratchpads "htop")
     , ("M-g", spawnSelected' myAppGrid )
     ]
@@ -111,12 +113,12 @@ addTopBar = noFrillsDeco shrinkText myTabTheme
 
 myLayout =
     avoidStruts
-    $ smartBorders
-    $ windowNavigation
     $ addTopBar
-    $ addTabs shrinkText myTabTheme
+    $ addTabs shrinkText mySubTabTheme
+    $ smartBorders
     $ subLayout [] Simplest
     $ spacingRaw False (Border 0 0 0 0) True (Border myGap myGap myGap myGap) True
+    $ windowNavigation
     $ ResizableTall 1 (3/100) (5/9) []
 
 {-
