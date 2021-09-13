@@ -67,7 +67,7 @@ if cat /etc/hostname | grep -q "VM"; then
         xmonad
     fi
 else
-    if [ -x /usr/bin/VBoxManage ]; then
+    if [ -x /usr/bin/virtualbox ]; then
         virtualbox
     fi
 fi

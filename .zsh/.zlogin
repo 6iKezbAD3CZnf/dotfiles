@@ -1,12 +1,13 @@
 # Autostart
 
 # Dump libraries
-if [ -d $HOME/Notes/pacman ]; then
-    if cat /etc/hostname | grep -q "ISpc-Arch"; then
-        pacman -Qe > $HOME/Notes/pacman/ISpc-Arch.packages
-    elif cat /etc/hostname | grep -q "Kodaira-HP-Arch"; then
-        pacman -Qe > $HOME/Notes/pacman/Kodaira-HP-Arch.packages
-    fi
+if [ -d $HOME/System/pacman ]; then
+    pacman -Qe > $HOME/System/pacman/$(cat /etc/hostname).packages
+fi
+
+# Dump systemctl status
+if [ -d $HOME/System/systemctl ]; then
+    systemctl list-unit-files > $HOME/System/systemctl/$(cat /etc/hostname).status
 fi
 
 # Syncthing
