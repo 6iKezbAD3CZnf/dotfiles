@@ -156,6 +156,7 @@ myAppGrid =
     , ("Firefox", "firefox")
     , ("PCManFM", "pcmanfm")
     , ("ArchVM", "VBoxManage startvm Arch")
+    , ("SaveWallpaper", "cp $HOME/.cache/unsplash_nature_on_boot.jpg $HOME/Images/wallpapers/unsplash_nature.$(date +%F-%H-%M-%S).jpg")
     ]
 
 {-
