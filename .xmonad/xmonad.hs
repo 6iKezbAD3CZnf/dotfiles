@@ -114,7 +114,7 @@ addTopBar = noFrillsDeco shrinkText myTabTheme
 myLayout =
     avoidStruts
     $ addTopBar
-    $ addTabs shrinkText mySubTabTheme
+    $ addTabs shrinkText myTabTheme
     $ smartBorders
     $ subLayout [] Simplest
     $ spacingRaw False (Border 0 0 0 0) True (Border myGap myGap myGap myGap) True
