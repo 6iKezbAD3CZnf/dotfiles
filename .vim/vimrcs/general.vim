@@ -60,7 +60,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " autocomplete
-set completeopt=menu,menuone,preview,noselect,noinsert
+set completeopt=menu,menuone,preview
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
