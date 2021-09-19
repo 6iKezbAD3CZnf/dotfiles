@@ -25,6 +25,7 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.FadeInactive
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 
@@ -36,6 +37,7 @@ myGap = 3
 myFont = "xft:Noto Sans:size=8"
 myActiveColor = "#268bd2"
 myInactiveColor = "#002b36"
+myFadeAmount = 0.5
 
 myBrowser = "firefox"
 myTerminal = "alacritty"
@@ -57,6 +59,7 @@ myConfig p = def
     , terminal = myTerminal
     , focusedBorderColor = myActiveColor
     , layoutHook = myLayout
+    -- , logHook = myFadeHook <+> myLogHook p
     , logHook = myLogHook p
     , manageHook = namedScratchpadManageHook scratchpads <+> myManageHook <+> manageHook def
     , normalBorderColor = myInactiveColor
@@ -113,11 +116,11 @@ addTopBar = noFrillsDeco shrinkText myTabTheme
 
 myLayout =
     avoidStruts
+    $ smartBorders
     $ addTopBar
     $ addTabs shrinkText myTabTheme
-    $ smartBorders
-    $ subLayout [] Simplest
     $ spacingRaw False (Border 0 0 0 0) True (Border myGap myGap myGap myGap) True
+    $ subLayout [] Simplest
     $ windowNavigation
     $ ResizableTall 1 (3/100) (5/9) []
 
@@ -129,6 +132,8 @@ myLogHook p = dynamicLogWithPP xmobarPP
     { ppOutput = hPutStrLn p
     , ppTitle = xmobarColor "green" "" . shorten 50
     }
+
+myFadeHook = fadeInactiveLogHook myFadeAmount
 
 {-
  - Manage Hook
