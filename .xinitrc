@@ -32,19 +32,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-# set resolution in VirtualBox
+# set resolution
 
-if cat /etc/hostname | grep -q "VM" && [ -x /usr/bin/xrandr ]; then
-    xrandr --output Virtual1 --mode 1920x1080
-    xrandr --output Virtual-1 --mode 1920x1080
-fi
-
-# set the wallpaper (downloading from Unsplash.com on boot)
-
-if [ -x /usr/bin/feh ] && [ -x /usr/bin/wget ] && [ -d $HOME/Images/wallpapers ]; then
-    wget --quiet -O $HOME/.cache/unsplash_nature_on_boot.jpg "https://source.unsplash.com/1920x1080?nature"
-    feh --bg-scale $HOME/.cache/unsplash_nature_on_boot.jpg
-    $HOME/.fehbg &
+if [ -x /usr/bin/xrandr ]; then
+    xrandr --auto
 fi
 
 # for window transparency
@@ -59,7 +50,15 @@ if [ -x /usr/bin/ibus-daemon ]; then
     ibus-daemon -drx
 fi
 
-# start xmonad
+# set the wallpaper (downloading from Unsplash.com on boot)
+
+if [ -x /usr/bin/feh ] && [ -x /usr/bin/wget ] && [ -d $HOME/Images/wallpapers ]; then
+    wget --quiet -O $HOME/.cache/unsplash_nature_on_boot.jpg "https://source.unsplash.com/1920x1080?nature"
+    feh --bg-scale $HOME/.cache/unsplash_nature_on_boot.jpg
+    $HOME/.fehbg &
+fi
+
+# start Xorg
 
 if cat /etc/hostname | grep -q "VM"; then
     if [ -x /usr/bin/xmonad ]; then
