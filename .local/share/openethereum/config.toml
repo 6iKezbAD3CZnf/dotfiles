@@ -1,0 +1,161 @@
+[parity]
+# mode
+# mode_timeout
+# mode_alarm
+# chain
+# keys_path
+base_path = "/mnt/hdd"
+db_path = "/mnt/hdd/chains"
+
+[account]
+# fast_unlock
+# keys_iterations
+# refresh_time
+# unlock
+# password
+
+[ui]
+# path
+
+[network]
+# warp
+# warp_barrier
+# port
+# interface
+# min_peers
+# max_peers
+# snapshot_peers
+# max_pending_peers
+# nat
+# allow_ips
+# id
+# bootnodes
+# discovery
+# node_key
+reserved_peers = "/home/tatsu/Notes/openethereum/reserved-peers.txt"
+# reserved_only
+
+[rpc]
+# disable
+# port
+# interface
+cors = ["all"]
+# apis
+# hosts
+# server_threads
+# processing_threads
+# max_payload
+# keep_alive
+# experimental_rpcs
+# poll_lifetime
+# allow_missing_blocks
+
+[websockets]
+# disable
+# port
+interface = "all"
+# apis
+# origins
+# hosts
+# max_connections
+# max_payload
+
+[ipc]
+# path
+# apis
+# disable
+# path
+# apis
+
+[secretstore]
+# disable
+# disable_http
+# disable_auto_migrate
+# acl_contract
+# service_contract
+# service_contract_srv_gen
+# service_contract_srv_retr
+# service_contract_doc_store
+# service_contract_doc_sretr
+# self_secret
+# admin_public
+# nodes
+# server_set_contract
+# interface
+# port
+# http_interface
+# http_port
+# path
+
+[mining]
+# author
+# engine_signer
+# force_sealing
+# reseal_on_uncle
+# reseal_on_txs
+# reseal_min_period
+# reseal_max_period
+# work_queue_size
+# tx_gas_limit
+# tx_time_limit
+# relay_set
+# min_gas_price
+# gas_price_percentile
+# usd_per_tx
+# usd_per_eth
+# price_update_period
+# gas_floor_target
+# gas_cap
+# extra_data
+# tx_queue_size
+# tx_queue_per_sender
+# tx_queue_mem_limit
+# tx_queue_locals
+# tx_queue_strategy
+# tx_queue_ban_count
+# tx_queue_ban_time
+# tx_queue_no_unfamiliar_locals
+# tx_queue_no_early_reject
+# remove_solved
+# notify_work
+# refuse_service_transactions
+# infinite_pending_block
+# max_round_blocks_to_import
+
+[footprint]
+# tracing
+pruning = "fast"
+# pruning_history
+# pruning_memory
+# fast_and_loose
+# cache_size
+# cache_size_db
+# cache_size_blocks
+# cache_size_queue
+# cache_size_state
+# db_compaction
+# fat_db
+# scale_verifiers
+# num_verifiers
+
+[snapshots]
+# enable
+# processing_threads
+
+[misc]
+# logging
+# log_file
+color = false
+# ports_shift
+# unsafe_expose
+
+[stratum]
+# interface
+# port
+# secret
+
+[metrics]
+# enable
+# prefix
+# port
+# interface
