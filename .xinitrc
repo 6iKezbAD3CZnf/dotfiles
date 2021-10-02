@@ -35,7 +35,7 @@ fi
 # set resolution
 
 if [ -x /usr/bin/xrandr ]; then
-    xrandr --auto
+    xrandr --output Virtual1 --mode 1920x1080 || xrandr --output Virtual-1 --mode 1920x1080 || xrandr --auto
 fi
 
 # for window transparency
