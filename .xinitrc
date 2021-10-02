@@ -53,8 +53,8 @@ fi
 # set the wallpaper (downloading from Unsplash.com on boot)
 
 if [ -x /usr/bin/feh ] && [ -x /usr/bin/wget ] && [ -d $HOME/Images/wallpapers ]; then
-    wget --quiet -O $HOME/.cache/unsplash_nature_on_boot.jpg "https://source.unsplash.com/1920x1080?nature"
-    feh --bg-scale $HOME/.cache/unsplash_nature_on_boot.jpg
+    wget --quiet -O $HOME/.cache/unsplash_nature_on_boot.jpg "https://source.unsplash.com/3840x2160?nature"
+    feh --bg-fill $HOME/.cache/unsplash_nature_on_boot.jpg
     $HOME/.fehbg &
 fi
 
