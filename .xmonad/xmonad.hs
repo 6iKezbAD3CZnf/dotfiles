@@ -74,8 +74,8 @@ myKeys =
     [ ("M-<Return>", spawn myTerminal)
     , ("M-f", spawn myBrowser)
     , ("M-q", kill)
-    , ("M-a", sendMessage MirrorShrink)
-    , ("M-x", sendMessage MirrorExpand)
+    -- , ("M-a", sendMessage MirrorShrink)
+    -- , ("M-x", sendMessage MirrorExpand)
     , ("M-e", sendMessage Expand)
     , ("M-s", sendMessage Shrink)
     , ("M-m", withFocused $ sendMessage . MergeAll)
@@ -95,7 +95,8 @@ myKeys =
     , ("M-S-j", sendMessage $ pullGroup D)
     , ("M-S-q", io (exitWith ExitSuccess))
     , ("M-r", spawn "xmonad --recompile; xmonad --restart")
-    , ("M-z", namedScratchpadAction scratchpads "htop")
+    , ("M-x h", namedScratchpadAction scratchpads "htop")
+    , ("M-x s", namedScratchpadAction scratchpads "slack")
     , ("M-g", spawnSelected' myAppGrid )
     ]
 
@@ -173,4 +174,6 @@ myAppGrid =
 scratchpads = [
     NS "htop" "alacritty -t htop -e htop" (title =? "htop")
             (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
+    , NS "slack" "slack" (className =? "Slack")
+            (customFloating $ W.RationalRect (1/10) (1/10) (4/5) (4/5))
     ] where role = stringProperty "WM_WINDOW_ROLE"
