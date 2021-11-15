@@ -97,6 +97,7 @@ myKeys =
     , ("M-r", spawn "xmonad --recompile; xmonad --restart")
     , ("M-x h", namedScratchpadAction scratchpads "htop")
     , ("M-x s", namedScratchpadAction scratchpads "slack")
+    , ("M-x p", namedScratchpadAction scratchpads "pcmanfm")
     , ("M-g", spawnSelected' myAppGrid )
     ]
 
@@ -171,9 +172,11 @@ myAppGrid =
  - Scratchpads
  -}
 
-scratchpads = [
-    NS "htop" "alacritty -t htop -e htop" (title =? "htop")
+scratchpads =
+    [ NS "htop" "alacritty -t htop -e htop" (title =? "htop")
             (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
     , NS "slack" "slack" (className =? "Slack")
+            (customFloating $ W.RationalRect (1/10) (1/10) (4/5) (4/5))
+    , NS "pcmanfm" "pcmanfm" (className =? "Pcmanfm")
             (customFloating $ W.RationalRect (1/10) (1/10) (4/5) (4/5))
     ] where role = stringProperty "WM_WINDOW_ROLE"
