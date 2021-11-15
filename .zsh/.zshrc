@@ -4,6 +4,7 @@ alias la='ls -la'
 alias v='nvim'
 alias c='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vivado='/tools/Xilinx/Vivado/2019.2/bin/vivado -nolog -nojournal'
+alias nmgui='nm-applet    2>&1 > /dev/null &; stalonetray  2>&1 > /dev/null; killall nm-applet'
 
 # Options
 
