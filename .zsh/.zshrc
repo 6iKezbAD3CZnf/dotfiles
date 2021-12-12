@@ -1,5 +1,6 @@
 # Alias
 
+alias sudo='sudo ' # https://linuxhandbook.com/run-alias-as-sudo/
 alias la='ls -la'
 alias v='nvim'
 alias c='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
