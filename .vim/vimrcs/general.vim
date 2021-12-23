@@ -266,9 +266,10 @@ map <leader>bn :bnext<cr>
 " Useful tmux-like mappings for managing tabs
 map <leader>tc :tabnew<cr>
 map <leader>tn :tabnext<cr>
+map <leader>tp :tabprev<cr>
 map <leader>to :tabonly<cr>
 map <leader>tx :tabclose<cr>
-map <leader>tm :tabmove
+map <leader>tm :tabmove<space>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
