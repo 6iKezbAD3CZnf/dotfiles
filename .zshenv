@@ -1,8 +1,8 @@
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 export ZDOTDIR=$HOME/.zsh
 export HISTFILE=$ZDOTDIR/.zsh_history

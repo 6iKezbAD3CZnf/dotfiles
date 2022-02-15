@@ -44,10 +44,10 @@ if [ -x /usr/bin/xcompmgr ]; then
     xcompmgr &
 fi
 
-# start ibus
+# start fcitx
 
-if [ -x /usr/bin/ibus-daemon ]; then
-    ibus-daemon -drx
+if [ -x /usr/bin/fcitx ]; then
+    fcitx &
 fi
 
 # set the wallpaper (downloading from Unsplash.com on boot)
@@ -60,13 +60,7 @@ fi
 
 # start Xorg
 
-if cat /etc/hostname | grep -q "VM"; then
-    if [ -x /usr/bin/xmonad ]; then
-        xmonad --recompile;
-        xmonad
-    fi
-else
-    if [ -x /usr/bin/virtualbox ]; then
-        virtualbox
-    fi
+if [ -x /usr/bin/xmonad ]; then
+    xmonad --recompile;
+    xmonad
 fi
