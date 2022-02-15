@@ -43,7 +43,7 @@ let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 
 " Avoid cursor disappearing
 let g:ale_echo_cursor = 1
