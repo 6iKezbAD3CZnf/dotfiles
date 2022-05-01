@@ -1,0 +1,19 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer:
+"       Tatsuya Kubo https://github.com/6iKezbAD3CZnf
+"
+" Version:
+"       found in https://github.com/6iKezbAD3CZnf/dotfiles
+"
+" Sections:
+"    -> Source File Paths
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Source Files Paths
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.vim/vimrcs/general.vim
+source $HOME/.vim/vimrcs/file_types.vim
+source $HOME/.vim/vimrcs/plugins_config.vim

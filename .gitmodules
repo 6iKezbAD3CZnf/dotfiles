@@ -7,3 +7,45 @@
 [submodule "zsh-history-substring-search"]
 	path = zsh/.zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "vimtex"]
+	path = nvim/.vim/pack/filetype/start/vimtex
+	url = https://github.com/lervag/vimtex.git
+[submodule "ale"]
+	path = nvim/.vim/pack/general/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "auto-pairs"]
+	path = nvim/.vim/pack/general/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "nerdtree"]
+	path = nvim/.vim/pack/general/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "templenty"]
+	path = nvim/.vim/pack/general/start/templenty
+	url = https://gitlab.com/tatsuya_rf46/templenty.vim.git
+[submodule "vim-surround"]
+	path = nvim/.vim/pack/general/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim-color-solarized"]
+	path = nvim/.vim/pack/colorscheme/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim-airline"]
+	path = nvim/.vim/pack/layout/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nerdcommenter"]
+	path = nvim/.vim/pack/general/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "bufexplorer"]
+	path = nvim/.vim/pack/general/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "vim-airline-themes"]
+	path = nvim/.vim/pack/layout/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "rust.vim"]
+	path = nvim/.vim/pack/filetype/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim-toml"]
+	path = nvim/.vim/pack/filetype/start/vim-toml
+	url = https://github.com/cespare/vim-toml.git
+[submodule "vim-solidity"]
+	path = nvim/.vim/pack/filetype/start/vim-solidity
+	url = https://github.com/tomlion/vim-solidity.git
