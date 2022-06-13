@@ -1,5 +1,10 @@
 # PATH
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+
+# FCITX
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # ZSH
 export ZDOTDIR=$HOME/.zsh

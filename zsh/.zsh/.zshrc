@@ -4,7 +4,6 @@ alias sudo='sudo ' # https://linuxhandbook.com/run-alias-as-sudo/
 alias ll='ls -l'
 alias la='ls -la'
 alias v='nvim'
-alias nmgui='nm-applet    2>&1 > /dev/null &; stalonetray  2>&1 > /dev/null; killall nm-applet'
 
 # Options
 
