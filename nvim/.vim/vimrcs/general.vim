@@ -182,6 +182,8 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+set bri "Break indent
+set briopt=shift:2,min:40,sbr "Break indent option
 
 " Disable auto comment format
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

@@ -25,7 +25,7 @@
 [submodule "vim-surround"]
 	path = nvim/.vim/pack/general/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim-color-solarized"]
+[submodule "vim-colors-solarized"]
 	path = nvim/.vim/pack/colorscheme/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim-airline"]
