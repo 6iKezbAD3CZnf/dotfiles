@@ -2,6 +2,7 @@
 " General:
 "     -> Ale
 "     -> FZF
+"     -> Goyo
 "     -> NERDCommenter
 "     -> NERDTree
 "     -> UltiSnips
@@ -68,6 +69,14 @@ let g:fzf_action = {
             \ 'ctrl-s': 'vsplit' }
 let g:fzf_layout = { 'down': '40%' }
 map <leader>f :FZF<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Goyo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:goyo_width = '85%'
+let g:goyo_height = '85%'
+let g:goyo_linenr = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
