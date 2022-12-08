@@ -79,6 +79,13 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit="vertical"
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Goyo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:goyo_width = "85%"
+let g:goyo_height = "85%"
+
+
 
 " -------------------- Filetype ---------------------------{{{1
 

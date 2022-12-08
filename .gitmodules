@@ -49,3 +49,6 @@
 [submodule "vim-solidity"]
 	path = nvim/.vim/pack/filetype/start/vim-solidity
 	url = https://github.com/tomlion/vim-solidity.git
+[submodule "nvim/.vim/pack/general/start/goyo.vim"]
+	path = nvim/.vim/pack/general/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
