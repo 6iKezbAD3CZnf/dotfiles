@@ -94,3 +94,4 @@ let g:goyo_height = "85%"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_latexmk = { 'build_dir' : 'latex_build' }
+let g:vimtex_quickfix_open_on_warning = 0

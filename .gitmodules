@@ -52,3 +52,6 @@
 [submodule "nvim/.vim/pack/general/start/goyo.vim"]
 	path = nvim/.vim/pack/general/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "nvim/.vim/pack/general/start/ultisnips.git"]
+	path = nvim/.vim/pack/general/start/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
