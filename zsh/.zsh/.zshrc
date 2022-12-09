@@ -53,6 +53,11 @@ if [ -x "/usr/bin/tmux" ] && [ -z "$TMUX" ] && [ -n "${DISPLAY}" ]; then
     tmux attach-session || tmux
 fi
 
+# Rust
+if [ -f "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
+
 # Starship
 
 if [ -x /usr/bin/starship ]; then

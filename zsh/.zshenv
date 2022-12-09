@@ -1,5 +1,5 @@
 # PATH
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin
 
 # FCITX
 export GTK_IM_MODULE=fcitx
