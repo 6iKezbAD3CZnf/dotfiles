@@ -1,6 +1,8 @@
 # PATH
 export PATH=$PATH:$HOME/.local/bin
 
+export XDG_CONFIG_HOME=$HOME/.config
+
 # FCITX
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

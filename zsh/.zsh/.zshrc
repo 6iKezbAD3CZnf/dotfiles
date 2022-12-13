@@ -42,13 +42,19 @@ if [ -f "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 fi
 
+# FZF
 if [ -x /usr/bin/fzf ]; then
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
 fi
 
-# Tmux
+# Zoxide
+if [ -x /usr/bin/zoxide ]; then
+    export _ZO_ECHO=1
+    eval "$(zoxide init zsh)"
+fi
 
+# Tmux
 if [ -x "/usr/bin/tmux" ] && [ -z "$TMUX" ] && [ -n "${DISPLAY}" ]; then
     tmux attach-session || tmux
 fi
@@ -59,7 +65,6 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # Starship
-
 if [ -x /usr/bin/starship ]; then
     unsetopt PROMPT_SP # fix first line percent symbol
     eval "$(starship init zsh)"
