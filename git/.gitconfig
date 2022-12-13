@@ -1,8 +1,10 @@
 [user]
     name = Tatsuya Kubo
     email = 6iKezbAD3CZnf@gmail.com
+
 [core]
     editor = nvim
+
 [alias]
     st = status
     cm = commit
@@ -10,5 +12,6 @@
     ps = push
     pl = pull
     sw = switch
+
 [init]
     defaultBranch = main
