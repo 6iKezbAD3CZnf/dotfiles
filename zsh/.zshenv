@@ -1,5 +1,5 @@
 # PATH
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/go/bin
 
 export XDG_CONFIG_HOME=$HOME/.config
 

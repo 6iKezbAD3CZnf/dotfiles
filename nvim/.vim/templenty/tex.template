@@ -1,12 +1,12 @@
 \documentclass[dvipdfmx]{jsarticle}
 
 % Packages
-\usepackage{amsmath, listings}
+\usepackage{}
 
 \begin{document}
 
 \title{}
-\author{久保龍哉 05201009}
+\author{久保龍哉}
 \date{}
 
 \maketitle
