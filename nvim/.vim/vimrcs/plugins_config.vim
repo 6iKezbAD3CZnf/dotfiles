@@ -24,7 +24,8 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 
 map <silent> <leader>a <Plug>(ale_next_wrap)
-map <leader>d :ALEGoToDefinition<cr>
+nmap <leader>ad :ALEGoToDefinition<cr>
+nmap <leader>at :ALEGoToDefinition -tab<cr>
 
 " Enabling highlighting
 let g:ale_set_highlights = 1
@@ -64,6 +65,7 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=/usr/bin/fzf
 let g:fzf_action = {
+            \ 'ctrl-t': 'tab split',
             \ 'ctrl-i': 'split',
             \ 'ctrl-s': 'vsplit' }
 let g:fzf_layout = { 'down': '40%' }

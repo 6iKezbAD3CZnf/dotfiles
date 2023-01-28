@@ -46,7 +46,7 @@ noremap \ ,
 
 " Fast saving
 nmap <leader>w :w!<cr>
-map <leader>q :q<cr>
+" map <leader>q :tabclose<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -226,6 +226,10 @@ cnoremap <C-N> <Down>
 " When on, splitting a window will put the new window below the current
 set splitbelow
 
+" When on, all the windows are automatically made the same size after
+" splitting or closing a window.
+" set noequalalways
+
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
@@ -273,6 +277,29 @@ endtry
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Open 3-column windows when the display is large
+function CenterPane()
+    if winwidth(0) > 300
+        lefta vnew
+        vnew
+        wincmd w
+        wincmd L
+        wincmd h
+    endif
+endfunction
+
+function MyTabClose()
+    try
+        tabclose
+    catch
+        quitall
+    endtry
+endfunction
+
+autocmd VimEnter,TabNew * call CenterPane()
+
+map <leader>q :call MyTabClose()<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
