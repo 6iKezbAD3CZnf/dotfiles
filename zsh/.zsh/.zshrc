@@ -9,6 +9,11 @@ alias v='nvim'
 
 setopt share_history
 
+# Use vi mode
+
+bindkey -v
+export KEYTIMEOUT=1
+
 # Key Bindings
 
 function clear-scrollback-screen {
@@ -56,12 +61,11 @@ fi
 
 # Tmux
 if [ -x "/usr/bin/tmux" ] && [ -z "$TMUX" ] && [ -n "${DISPLAY}" ]; then
-    tmux attach-session || tmux
-fi
-
-# Rust
-if [ -f "$HOME/.cargo/env" ]; then
-    source "$HOME/.cargo/env"
+    tmux new-session -d -s Main 2> /dev/null; \
+    tmux new-session -d -s Background 2> /dev/null; \
+    tmux new-session -d -s Popup 2> /dev/null; \
+    tmux new-session -d -s Temporary 2> /dev/null; \
+    tmux attach-session -t Temporary
 fi
 
 # Starship
