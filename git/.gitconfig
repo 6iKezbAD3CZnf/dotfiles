@@ -1,17 +1,22 @@
 [user]
-    name = Tatsuya Kubo
-    email = 6iKezbAD3CZnf@gmail.com
+name = Tatsuya Kubo
+email = 6iKezbAD3CZnf@gmail.com
 
 [core]
-    editor = nvim
+editor = nvim
 
 [alias]
-    st = status
-    cm = commit
-    ch = checkout
-    ps = push
-    pl = pull
-    sw = switch
+st = status
+cm = commit
+ch = checkout
+ps = push
+pl = pull
+sw = switch
 
 [init]
-    defaultBranch = main
+defaultbranch = main
+
+[diff "gds_diff"]
+command = python -m gdsfactory.gdsdiff.gds_diff_git
+binary = True
+
