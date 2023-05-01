@@ -59,13 +59,18 @@ if [ -x /usr/bin/zoxide ]; then
     eval "$(zoxide init zsh)"
 fi
 
-# Tmux
-if [ -x "/usr/bin/tmux" ] && [ -z "$TMUX" ] && [ -n "${DISPLAY}" ]; then
-    tmux new-session -d -s Main 2> /dev/null; \
-    tmux new-session -d -s Background 2> /dev/null; \
-    tmux new-session -d -s Popup 2> /dev/null; \
-    tmux new-session -d -s Temporary 2> /dev/null; \
-    tmux attach-session -t Temporary
+# # Tmux
+# if [ -x "/usr/bin/tmux" ] && [ -z "$TMUX" ] && [ -n "${DISPLAY}" ]; then
+#     tmux new-session -d -s Main 2> /dev/null; \
+#     tmux new-session -d -s Background 2> /dev/null; \
+#     tmux new-session -d -s Popup 2> /dev/null; \
+#     tmux new-session -d -s Temporary 2> /dev/null; \
+#     tmux attach-session -t Temporary
+# fi
+
+# Zellij
+if [ -x "/usr/bin/zellij" ]; then
+    ZELLIJ_AUTO_ATTACH=true eval "$(zellij setup --generate-auto-start zsh)"
 fi
 
 # Starship
