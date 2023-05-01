@@ -46,9 +46,6 @@
 [submodule "nvim/.vim/pack/general/start/fcitx"]
 	path = nvim/.vim/pack/general/start/fcitx.vim
 	url = https://github.com/lilydjwg/fcitx.vim.git
-[submodule "tmux/.tmux/tpm"]
-	path = tmux/.tmux/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "nvim/.vim/pack/general/start/copilot.vim"]
 	path = nvim/.vim/pack/general/start/copilot.vim
 	url = https://github.com/github/copilot.vim
