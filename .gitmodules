@@ -7,12 +7,6 @@
 [submodule "zsh-history-substring-search"]
 	path = zsh/.zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
-[submodule "vimtex"]
-	path = nvim/.vim/pack/filetype/start/vimtex
-	url = https://github.com/lervag/vimtex.git
-[submodule "auto-pairs"]
-	path = nvim/.vim/pack/general/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "nerdtree"]
 	path = nvim/.vim/pack/general/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
@@ -37,15 +31,6 @@
 [submodule "vim-solidity"]
 	path = nvim/.vim/pack/filetype/start/vim-solidity
 	url = https://github.com/tomlion/vim-solidity.git
-[submodule "nvim/.vim/pack/general/start/goyo.vim"]
-	path = nvim/.vim/pack/general/start/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
-[submodule "nvim/.vim/pack/general/start/fcitx"]
-	path = nvim/.vim/pack/general/start/fcitx.vim
-	url = https://github.com/lilydjwg/fcitx.vim.git
-[submodule "nvim/.vim/pack/general/start/copilot.vim"]
-	path = nvim/.vim/pack/general/start/copilot.vim
-	url = https://github.com/github/copilot.vim
 [submodule "nvim/.vim/pack/general/start/packer.nvim"]
 	path = nvim/.vim/pack/general/start/packer.nvim
 	url = https://github.com/wbthomason/packer.nvim
