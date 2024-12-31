@@ -1,9 +1,10 @@
 [user]
 name = Tatsuya Kubo
-email = 6iKezbAD3CZnf@gmail.com
+email = tatsuya.kubo@is.s.u-tokyo.ac.jp
 
 [core]
 editor = nvim
+sshCommand = ssh -i ~/.ssh/id_rsa2 -F /dev/null
 
 [alias]
 st = status
@@ -19,4 +20,3 @@ defaultbranch = main
 [diff "gds_diff"]
 command = python -m gdsfactory.gdsdiff.gds_diff_git
 binary = True
-

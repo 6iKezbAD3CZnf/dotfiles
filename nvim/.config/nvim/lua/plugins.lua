@@ -82,6 +82,12 @@ require('packer').startup(function(use)
 
     -- ALE
     use 'dense-analysis/ale'
+
+    use 'lervag/vimtex'
+
+    use "keaising/im-select.nvim"
+
+    use 'altercation/vim-colors-solarized'
 end)
 
 -- Mason Setup
@@ -241,11 +247,8 @@ vim.keymap.set('t', "<Esc>", "<C-\\><C-n>")
 
 -- Color Scheme
 vim.cmd([[
-if has('termguicolors')
-    set termguicolors
-endif
 set background=light
-colorscheme kanagawa
+colorscheme solarized
 ]])
 
 -- Copilot
@@ -275,3 +278,8 @@ vim.keymap.set('n', "<leader>g", ":Goyo<CR>")
 
 -- ALE
 vim.g.ale_completion_enabled = 0
+
+-- im-select
+require('im_select').setup {
+    default_im_select = "com.apple.keylayout.ABC"
+}
